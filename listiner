@@ -1,0 +1,26 @@
+package com.ghalib.java_gui_practice_12.c_event;
+
+import javax.swing.JFrame;
+
+public class TestListener {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		new JFrame().setVisible(true);
+
+		Changer changer = new Changer();
+
+		Listener l1 = new Listener() {
+			public void call(String param) {
+				System.out.println("1. " + param);
+			}
+		};
+		
+		changer.addListener(l1);
+		
+		
+	}
+
+}
